@@ -136,25 +136,31 @@ class Payments extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      height: mediaheight * 0.1,
-                      width: mediawidth * 0.44,
-                      decoration: BoxDecoration(
-                          color: orangg, borderRadius: BorderRadius.circular(10)),
-                      child: Center(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'AMOUNT ON HOLD',
-                              style: whitenormal_text,
-                            ),
-                            Text(
-                              '\$0',
-                              style: whitelarge_text,
-                            ),
-                          ],
+                    GestureDetector(
+                      onTap: (){
+                        providerone.Sub();
+                      },
+                      child: Container(
+                        height: mediaheight * 0.1,
+                        width: mediawidth * 0.44,
+                        decoration: BoxDecoration(
+                            color: orangg, borderRadius: BorderRadius.circular(10)),
+                        child: Center(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'AMOUNT ON HOLD',
+                                style: whitenormal_text,
+                              ),
+                              Text(
+                               ' ${providerone.totalAmount-providerone.usedAmount}',
+
+                                style: whitelarge_text,
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),

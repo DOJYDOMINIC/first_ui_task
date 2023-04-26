@@ -15,15 +15,16 @@ class ProviderOne extends ChangeNotifier {
     notifyListeners();
   }
 
-
-
-  //
   // int _count = 0;
   //
   // int get count => _count;
 
   void Add() {
     _used += 1000;
+    notifyListeners();
+  }
+  void Sub() {
+    _used -= 1000;
     notifyListeners();
   }
 }
